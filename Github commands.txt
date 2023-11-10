@@ -1,0 +1,54 @@
+
+lenovo@DESKTOP-S02PNDK MINGW64 ~/Desktop/GitDemo (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/lenovo/Desktop/GitDemo/.git/
+
+lenovo@DESKTOP-S02PNDK MINGW64 ~/Desktop/GitDemo (main)
+$ git add demo1.txt
+
+lenovo@DESKTOP-S02PNDK MINGW64 ~/Desktop/GitDemo (main)
+$ git config --global user.name Pravalika-10
+
+lenovo@DESKTOP-S02PNDK MINGW64 ~/Desktop/GitDemo (main)
+$ git config --global user.email dullapj1016@gmail.com
+
+lenovo@DESKTOP-S02PNDK MINGW64 ~/Desktop/GitDemo (main)
+$ git commit -m "demo1 file"
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    demo1.txt.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+lenovo@DESKTOP-S02PNDK MINGW64 ~/Desktop/GitDemo (main)
+$ git remote add origin https://github.com/Pravalika-10/GitDemo.git
+error: remote origin already exists.
+
+lenovo@DESKTOP-S02PNDK MINGW64 ~/Desktop/GitDemo (main)
+$ git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/Pravalika-10/GitDemo.git'
+
+lenovo@DESKTOP-S02PNDK MINGW64 ~/Desktop/GitDemo (main)
+$ git push -u origin main
+To https://github.com/Pravalika-10/GitDemo.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Pravalika-10/GitDemo.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+lenovo@DESKTOP-S02PNDK MINGW64 ~/Desktop/GitDemo (main)
+$ git push -f origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 223 bytes | 223.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Pravalika-10/GitDemo.git
+ + eac6806...afc3fe7 main -> main (forced update)
